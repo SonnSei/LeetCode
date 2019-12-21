@@ -7,7 +7,7 @@ import util.ListNode;
  * @Classname Solution2
  * @Description 两数相加
  * @Date 2019/12/9 8:23
- * @Created by Jesse
+ * @Created by SunCheng
  */
 public class Solution2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
