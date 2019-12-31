@@ -32,4 +32,38 @@ public class Solution8 {
         }
         return minus ? -ret : ret;
     }
+
+
+    public int myAtoi2(String str) {
+        if (str == null || (str = str.trim()).length() == 0) return 0;
+
+        int ret = 0;
+        boolean negative = false;
+
+        char firstChar = str.charAt(0);
+        if (firstChar < '0') {
+            if (firstChar == '-') {
+                negative = true;
+            } else if (firstChar != '+') {
+                return 0;
+            }
+            if (str.length() == 1) {
+                return 0;
+            }
+        }
+
+        int digit;
+        int index = negative?1:0;
+        while (index < str.length()) {
+            if ((digit = Character.digit(str.charAt(index++), 10)) < 0) break;
+            if (!negative && (ret > Integer.MAX_VALUE / 10 || ret == Integer.MAX_VALUE / 10 && digit > 7))
+                return Integer.MAX_VALUE;
+            if (negative && (ret > -(Integer.MIN_VALUE / 10) || ret == -(Integer.MIN_VALUE / 10) && digit > 8))
+                return Integer.MIN_VALUE;
+            ret *= 10;
+            ret += digit;
+        }
+
+        return negative ? -ret:ret;
+    }
 }
