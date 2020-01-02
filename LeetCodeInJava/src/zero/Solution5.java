@@ -60,6 +60,7 @@ public class Solution5 {
         int maxM = 0;
 
         for (int i = 1; i <list.size() ; i++) {
+            // 注意下面这一句
             dp[i] = maxR>i?Math.min(dp[maxM*2-i],maxR-i):1;
             while((i-dp[i])>=0 && (i+dp[i])<list.size() && list.get(i+dp[i]) == list.get(i-dp[i]))
                 dp[i]++;
