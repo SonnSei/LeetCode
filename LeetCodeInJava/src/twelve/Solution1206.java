@@ -15,7 +15,6 @@ public class Solution1206 {
             private int data = -1;
             private int maxLevel = 0;
             private Node[] forwards = new Node[MAX_LEVEL];
-            int count = 1;
         }
 
         private int levelCount;
@@ -23,51 +22,41 @@ public class Solution1206 {
         public Skiplist() {
             levelCount = 1;
             head = new Node();
-            head.maxLevel = MAX_LEVEL;
         }
 
         public boolean search(int target) {
             return getNode(target)!=null;
         }
 
-        private Node getNode(int target) {
+        public Node getNode(int target) {
             Node p = head;
-            for (int i = levelCount - 1; i >= 0; --i) {
+            for (int i = levelCount - 1; i >= 0; i--) {
                 while (p.forwards[i] != null && p.forwards[i].data < target) {
                     p = p.forwards[i];
                 }
             }
-
             if (p.forwards[0] != null && p.forwards[0].data == target) {
                 return p.forwards[0];
             }
             return null;
         }
 
-        public void add(int value) {
-            Node node = getNode(value);
-            if (node != null && node.data == value) {
-                node.count++;
-                return;
-            }
-
+        public void add(int num) {
             int level = randomLevel();
             Node newNode = new Node();
-            newNode.data = value;
+            newNode.data = num;
             newNode.maxLevel = level;
             Node[] update = new Node[level];
             for (int i = 0; i < level; i++) {
                 update[i] = head;
             }
-
             Node p = head;
             for (int i = level - 1; i >= 0; i--) {
-                while (p.forwards[i] != null && p.forwards[i].data < value) {
+                while (p.forwards[i] != null && p.forwards[i].data < num) {
                     p = p.forwards[i];
                 }
                 update[i] = p;
             }
-
             for (int i = 0; i < level; i++) {
                 newNode.forwards[i] = update[i].forwards[i];
                 update[i].forwards[i] = newNode;
@@ -78,26 +67,23 @@ public class Solution1206 {
             }
         }
 
-        public boolean erase(int value) {
+        public boolean erase(int num) {
             Node[] update = new Node[levelCount];
             Node p = head;
-            for (int i = levelCount - 1; i >= 0; --i) {
-                while (p.forwards[i] != null && p.forwards[i].data < value) {
+            for (int i = levelCount-1; i >=0 ; i--) {
+                while (p.forwards[i] != null && p.forwards[i].data < num) {
                     p = p.forwards[i];
                 }
                 update[i] = p;
             }
-
-            if (p.forwards[0] != null && p.forwards[0].data == value) {
-                if (p.forwards[0].count > 1) {
-                    p.forwards[0].count--;
-                    return true;
-                }
-
-                for (int i = levelCount - 1; i >= 0; --i) {
-                    if (update[i].forwards[i] != null && update[i].forwards[i].data == value) {
+            if (p.forwards[0] != null && p.forwards[0].data == num) {
+                for (int i = levelCount - 1; i >= 0; i--) {
+                    if (update[i].forwards[i] != null && update[i].forwards[i].data == num) {
                         update[i].forwards[i] = update[i].forwards[i].forwards[i];
                     }
+                }
+                while (levelCount > 1 && head.forwards[levelCount-1] == null) {
+                    levelCount--;
                 }
                 return true;
             }
