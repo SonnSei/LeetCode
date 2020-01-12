@@ -2,7 +2,7 @@ package p4寻找两个有序数组的中位数;
 
 /**
  * @Classname Solution1
- * @Description TODO
+ * @Description 寻找两个有序数组的中位数
  * @Date 2020/1/10 17:34
  * @Author SonnSei
  */

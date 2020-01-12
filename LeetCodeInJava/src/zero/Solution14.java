@@ -4,9 +4,17 @@ package zero;
  * @Classname Solution14
  * @Description 最长公共前缀
  * @Date 2019/12/16 19:54
- * @Created by SunCheng
+ * @Created by SonnSei
  */
 public class Solution14 {
+
+    /**
+     * 神仙算法
+     * 时间复杂度：O(s)，s为所有字符总数
+     * 空间复杂度：O(1)
+     * @param strs
+     * @return
+     */
     public String longestCommonPrefix3(String[] strs) {
         if (strs.length == 0) return "";
         String prefix = strs[0];
@@ -18,6 +26,13 @@ public class Solution14 {
         return prefix;
     }
 
+    /**
+     * 愚蠢的暴力
+     * 时间复杂度：O(s)，s为所有字符总数
+     * 空间复杂度：O(1)
+     * @param strs
+     * @return
+     */
     public String longestCommonPrefix2(String[] strs) {
         if (strs == null || strs.length == 0) return "";
         for (int i = 0; i < strs[0].length() ; i++){
@@ -30,6 +45,13 @@ public class Solution14 {
         return strs[0];
     }
 
+    /**
+     * 感觉这个分治也挺蠢
+     * 时间复杂度：O（s）
+     * 空间复杂度O(m*log(n))
+     * @param strs
+     * @return
+     */
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) return "";
         return longestCommonPrefix(strs, 0 , strs.length - 1);
@@ -57,6 +79,11 @@ public class Solution14 {
     }
 
 
+    /**
+     * 二分查找
+     * @param strs
+     * @return
+     */
     public String longestCommonPrefix4(String[] strs) {
         if (strs == null || strs.length == 0)
             return "";

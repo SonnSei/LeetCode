@@ -7,7 +7,6 @@ package p3无重复字符的最长字串;
  * @Author SonnSei
  */
 public class Solution5 {
-
     /**
      * 利用字符串的indexOf
      * @param s

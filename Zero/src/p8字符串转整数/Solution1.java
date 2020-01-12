@@ -7,10 +7,6 @@ package p8字符串转整数;
  * @Author SonnSei
  */
 public class Solution1 {
-    public static void main(String[] args) {
-        System.out.println(myAtoi("  -42"));
-    }
-
     public static int myAtoi(String str) {
         if (str == null || (str = str.trim()).length() == 0) return 0;
         boolean negative = false;
