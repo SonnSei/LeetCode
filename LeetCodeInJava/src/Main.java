@@ -9,7 +9,8 @@ import java.util.*;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Integer.toString(Integer.MIN_VALUE,2));
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Integer.MIN_VALUE);
     }
 
 

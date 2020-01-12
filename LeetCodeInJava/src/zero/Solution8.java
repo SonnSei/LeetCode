@@ -4,7 +4,7 @@ package zero;
  * @Classname Solution8
  * @Description 字符串转整数
  * @Date 2019/12/9 9:53
- * @Created by Jesse
+ * @Created by SonnSei
  */
 public class Solution8 {
     public int myAtoi(String str) {
