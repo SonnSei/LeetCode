@@ -34,7 +34,6 @@ public class Solution53 {
 
     /**
      * 动态规划，利用和数组，快速求解区间范围和，O（n^2）
-     *
      * @param nums
      * @return
      */
@@ -55,7 +54,6 @@ public class Solution53 {
 
     /**
      * 第二种解法的改进，不需要数组记录临时和，只需要维护一个int变量就行了，复杂度不变，空间复杂度变为O(1)
-     *
      * @param nums
      * @return
      */
