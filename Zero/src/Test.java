@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.operations.String;
+
 import java.util.Arrays;
 
 /**
@@ -7,12 +9,10 @@ import java.util.Arrays;
  * @Author SonnSei
  */
 public class Test {
-    static final String a = "ji";
     public static void main(String[] args) {
-        Object o = new Object();
-        synchronized (o){
+    }
 
-        }
+    private synchronized void test(){
 
     }
 }
