@@ -1,6 +1,5 @@
-import com.sun.org.apache.xpath.internal.operations.String;
-
-import java.util.Arrays;
+import java.time.Instant;
+import java.util.*;
 
 /**
  * @Classname Test
@@ -9,10 +8,27 @@ import java.util.Arrays;
  * @Author SonnSei
  */
 public class Test {
+    static int c;
     public static void main(String[] args) {
-    }
-
-    private synchronized void test(){
 
     }
+
+    /**
+     * test
+     * @param param
+     */
+    static void method(String param) {
+        switch (param) {
+            case "1":
+                System.out.println(1);
+                break;
+            case "2":
+                System.out.println(2);
+                break;
+            default:
+                System.out.println("default");
+        }
+    }
+
+
 }
