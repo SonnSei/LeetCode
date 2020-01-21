@@ -1,4 +1,4 @@
-package 字符串.p95不同的二叉搜素树Ⅱ;
+package 树.p95不同的二叉搜素树Ⅱ;
 
 import util.TreeNode;
 

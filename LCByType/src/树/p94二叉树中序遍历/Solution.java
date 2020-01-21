@@ -1,4 +1,4 @@
-package 字符串.p94二叉树中序遍历;
+package 树.p94二叉树中序遍历;
 
 import util.TreeNode;
 

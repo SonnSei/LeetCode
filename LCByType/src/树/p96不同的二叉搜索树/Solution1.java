@@ -1,4 +1,4 @@
-package 字符串.p96不同的二叉搜索树;
+package 树.p96不同的二叉搜索树;
 
 /**
  * @Classname Solution1

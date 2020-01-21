@@ -1,4 +1,4 @@
-package 字符串.p98验证二叉搜素树;
+package 树.p98验证二叉搜素树;
 
 import util.TreeNode;
 
