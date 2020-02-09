@@ -1,4 +1,4 @@
-package g0;
+package g0.p21合并两个有序链表;
 
 
 import util.ListNode;
@@ -7,7 +7,7 @@ import util.ListNode;
  * @Classname Solution21
  * @Description TODO
  * @Date 2019/12/11 19:01
- * @Created by Jesse
+ * @Created by SonnSei
  */
 public class Solution21 {
     /**

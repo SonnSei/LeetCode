@@ -1,4 +1,4 @@
-package g0;
+package g0.p23合并K个有序链表;
 
 import util.ListNode;
 
@@ -43,6 +43,8 @@ public class Solution23 {
         ListNode dummyHead = new ListNode(110);
         ListNode cur = dummyHead;
         while (!priorityQueue.isEmpty()) {
+            // 不需要对temp的next指针特殊处理，因为在后续操作中会重置，并且最后一个添加的
+            // 节点的next一定是null，因为它处于原来的链表尾
             ListNode temp = priorityQueue.poll();
             cur.next = temp;
             if(temp.next!=null)

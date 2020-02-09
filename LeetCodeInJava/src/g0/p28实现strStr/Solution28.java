@@ -1,4 +1,4 @@
-package g0;
+package g0.p28实现strStr;
 
 /**
  * @Classname Solution28

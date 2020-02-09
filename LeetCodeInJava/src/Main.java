@@ -10,8 +10,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         System.out.println(Integer.MAX_VALUE);
-        System.out.println(Integer.MIN_VALUE);
-        Math.min(1, 2);
+        System.out.println(Math.abs(Integer.MIN_VALUE));
     }
 
 

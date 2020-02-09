@@ -1,4 +1,4 @@
-package g0;
+package g0.p29两数相除;
 
 /**
  * @Classname Solution29

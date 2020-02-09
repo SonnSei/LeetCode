@@ -1,4 +1,4 @@
-package g0;
+package g0.p14最长公共前缀;
 
 /**
  * @Classname Solution14

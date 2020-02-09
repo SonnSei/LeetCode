@@ -1,10 +1,10 @@
-package g2;
+package g2.p233数字1的个数;
 
 /**
  * @Classname Solution233
  * @Description 数字 1 的个数
  * @Date 2019/12/22 9:10
- * @Author SunCheng
+ * @Author SonnSei
  */
 public class Solution233 {
     public int countDigitOne(int n) {
