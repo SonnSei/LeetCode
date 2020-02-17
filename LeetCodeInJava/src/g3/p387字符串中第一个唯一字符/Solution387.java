@@ -1,4 +1,4 @@
-package g3;
+package g3.p387字符串中第一个唯一字符;
 
 /**
  * @Classname Solution387

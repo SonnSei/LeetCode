@@ -1,4 +1,4 @@
-package g3;
+package g3.p303区域检索数组不可变;
 
 /**
  * @Classname Solution303

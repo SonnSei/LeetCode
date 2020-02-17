@@ -1,4 +1,4 @@
-package g3;
+package g3.p392判断子序列;
 
 import java.util.Arrays;
 
