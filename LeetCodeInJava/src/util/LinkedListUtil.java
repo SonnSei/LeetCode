@@ -26,5 +26,6 @@ public class LinkedListUtil {
             }
             node = node.next;
         }
+        System.out.println();
     }
 }
